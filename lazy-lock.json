@@ -11,7 +11,8 @@
   "nvim-lspconfig": { "branch": "master", "commit": "56f4c8cdcdffca8521d3415cba7894d2f9f11dfe" },
   "nvim-tree.lua": { "branch": "master", "commit": "1b453441f4b1a501a6251db4138cf67172d0d5d2" },
   "nvim-treesitter": { "branch": "master", "commit": "3731cf1c0c70287568d26f190849c68a46c21297" },
+  "nvim-treesitter-refactor": { "branch": "master", "commit": "75f5895cc662d61eb919da8050b7a0124400d589" },
   "nvim-web-devicons": { "branch": "master", "commit": "c3c1dc4e36969370ff589b7025df8ec2e5c881a2" },
   "onedark.vim": { "branch": "main", "commit": "b6b5ffe31a195a3077338d7a506b905e4a51590f" },
-  "vim-illuminate": { "branch": "master", "commit": "49062ab1dd8fec91833a69f0a1344223dd59d643" }
+  "tokyonight.nvim": { "branch": "main", "commit": "a0d5034fd6c26d997cd050a2f7d7083a20d2c94b" }
 }

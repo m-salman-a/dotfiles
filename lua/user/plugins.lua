@@ -18,6 +18,11 @@ local plugins = {
     priority = 1000
   },
   {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000
+  },
+  {
     "nvim-tree/nvim-web-devicons",
     lazy = false
   },
@@ -30,6 +35,12 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate"
+  },
+  {
+    "nvim-treesitter/nvim-treesitter-refactor",
+    requires = {
+      "nvim-treesitter/nvim-treesitter"
+    }
   },
   {
     "windwp/nvim-autopairs"
@@ -60,8 +71,9 @@ local plugins = {
   },
 
   {
-    "RRethy/vim-illuminate"
-  }
+    "RRethy/vim-illuminate",
+    enabled = false
+  },
 }
 
 require("lazy").setup(plugins, {
