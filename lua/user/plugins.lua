@@ -51,18 +51,21 @@ local plugins = {
     "hrsh7th/nvim-cmp",
   },
   "hrsh7th/cmp-nvim-lsp",
+  "hrsh7th/cmp-nvim-lua",
   "saadparwaiz1/cmp_luasnip",
 
   -- Snippets 
   {
     "L3MON4D3/LuaSnip",
   },
-}
 
-local opts = {
-  ui = {
-    border = "rounded"
+  {
+    "RRethy/vim-illuminate"
   }
 }
 
-require("lazy").setup(plugins, opts)
+require("lazy").setup(plugins, {
+  ui = {
+    border = "rounded"
+  }
+})

@@ -11,6 +11,7 @@ vim.opt.sidescrolloff = 8
 
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.hlsearch = false
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1

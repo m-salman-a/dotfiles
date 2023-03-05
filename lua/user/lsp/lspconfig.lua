@@ -17,7 +17,11 @@ end
 
 local servers = { "lua_ls", "yamlls", "jsonls" }
 
-mason.setup()
+mason.setup {
+  ui = {
+    border = "rounded"
+  }
+}
 
 mason_lspconfig.setup {
   ensure_initialized = servers,
@@ -29,7 +33,7 @@ local handlers = require("user.lsp.handlers")
 for _, lsp in ipairs(servers) do
   local settings = {}
 
-  if lsp == 'lua_ls' then
+  if lsp == "lua_ls" then
     settings = {
       Lua = {
 	diagnostics = {
@@ -45,7 +49,12 @@ for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = handlers.on_attach,
     capabilities = handlers.capabilities,
+    handlers = handlers.handlers,
     settings = settings,
   }
 end
+
+require("lspconfig.ui.windows").default_options = {
+  border = "rounded"
+}
 
