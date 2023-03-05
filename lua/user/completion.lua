@@ -23,6 +23,13 @@ cmp.setup {
     end,
   },
   mapping = cmp.mapping.preset.insert({
+    ["<CR>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+	cmp.confirm()
+      else
+	fallback() -- If you use vim-endwise, this fallback will behave the same as vim-endwise.
+      end
+    end),
 
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -49,8 +56,8 @@ cmp.setup {
     end, { "i", "s" }),
   }),
   window = {
-    -- completion = cmp.config.window.bordered(),
-    -- documentation = cmp.config.window.bordered(),
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
   sources = cmp.config.sources({
     { name = "nvim_lsp" },

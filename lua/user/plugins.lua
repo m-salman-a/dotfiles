@@ -59,4 +59,10 @@ local plugins = {
   },
 }
 
-require("lazy").setup(plugins)
+local opts = {
+  ui = {
+    border = "rounded"
+  }
+}
+
+require("lazy").setup(plugins, opts)
