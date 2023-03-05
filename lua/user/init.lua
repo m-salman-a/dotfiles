@@ -5,5 +5,6 @@ require "user.colorscheme"
 require "user.nvim-tree"
 require "user.nvim-treesitter"
 require "user.lsp"
+require "user.autopairs"
 require "user.completion"
 

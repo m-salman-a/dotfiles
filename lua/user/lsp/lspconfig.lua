@@ -15,28 +15,37 @@ if not ok3 then
   print("Lspconfig could not be initialized")
 end
 
+local servers = { "lua_ls", "yamlls", "jsonls" }
+
 mason.setup()
 
 mason_lspconfig.setup {
-  ensure_initialized = { "lua_ls", "yamlls", "jsonls" },
-
+  ensure_initialized = servers,
   automatic_installation = true
 }
 
 local handlers = require("user.lsp.handlers")
 
-lspconfig.lua_ls.setup {
-  on_attach = handlers.on_attach,
+for _, lsp in ipairs(servers) do
+  local settings = {}
 
-  settings = {
-    Lua = {
-      diagnostics = {
-	globals = { "vim" }
-      },
-      telemetry = {
-	enable = false
+  if lsp == 'lua_ls' then
+    settings = {
+      Lua = {
+	diagnostics = {
+	  globals = { "vim" }
+	},
+	telemetry = {
+	  enable = false
+	}
       }
     }
+  end
+
+  lspconfig[lsp].setup {
+    on_attach = handlers.on_attach,
+    capabilities = handlers.capabilities,
+    settings = settings,
   }
-}
+end
 
