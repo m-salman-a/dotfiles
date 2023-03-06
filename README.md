@@ -4,10 +4,12 @@
 - [X] add icons and left align them in cmp 
 - [X] set no highlight search after finding result
 - [X] autopairs
-- [ ] fuzzy finder
+- [X] fuzzy finder
+- [ ] setup window keybindings
+- [ ] setup fuzzy finder keybindings
 - [X] git integration 
-- [ ] flutter tools
-- [ ] bufferline
+- [X] flutter tools
+- [X] bufferline
 - [ ] debugger
 - [X] comments
 - [ ] which key
