@@ -56,6 +56,9 @@ local plugins = {
   {
     "neovim/nvim-lspconfig"
   },
+  {
+    "folke/neodev.nvim"
+  },
 
   -- CMP
   {
