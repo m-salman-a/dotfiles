@@ -20,6 +20,7 @@
 - [ ] which key
 - [X] tab management
 - [ ] lightbulb icon on code action
+- [ ] setup quick vertical splits
 
 # Issues
 

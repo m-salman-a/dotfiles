@@ -4,7 +4,11 @@ if not ok then
   return
 end
 
-nvim_tree.setup()
+nvim_tree.setup {
+  view = {
+    relativenumber = true
+  }
+}
 
 vim.api.nvim_create_autocmd({"QuitPre"}, {
     callback = function() vim.cmd("NvimTreeClose") end,
