@@ -67,7 +67,10 @@ local plugins = {
     "folke/neodev.nvim"
   },
   {
-    "akinsho/flutter-tools.nvim"
+    "akinsho/flutter-tools.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim"
+    }
   },
 
   -- CMP
@@ -105,7 +108,15 @@ local plugins = {
 
   -- Bufferline
   {
-    "nvim-lualine/lualine.nvim"
+    "nvim-lualine/lualine.nvim",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons"
+    }
+  },
+
+  -- Git
+  {
+    "lewis6991/gitsigns.nvim"
   },
 }
 

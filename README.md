@@ -5,13 +5,22 @@
 - [X] set no highlight search after finding result
 - [X] autopairs
 - [X] fuzzy finder
-- [ ] setup window keybindings
-- [ ] setup fuzzy finder keybindings
+- [X] setup window keybindings
+- [X] setup fuzzy finder keybindings
+- [X] setup Flutter keybindings
+- [ ] setup git keybindings
+- [X] configure telescope (preview images, disable binary preview)
 - [X] git integration 
+- [X] git gutter
 - [X] flutter tools
 - [X] bufferline
 - [ ] debugger
 - [X] comments
 - [ ] which key
-- [ ] tab management
+- [X] tab management
 
+# Issues
+
+- [X] :Telescope flutter not working
+- [ ] lazygit not working
+- [ ] icat in telescope not working

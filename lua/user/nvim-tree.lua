@@ -1,6 +1,6 @@
 local ok, nvim_tree = pcall(require, "nvim-tree")
 if not ok then
-  print("Nvim-Tree had an error")
+  print("Nvim-tree could not be initialized")
   return
 end
 
