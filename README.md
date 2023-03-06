@@ -8,7 +8,7 @@
 - [X] setup window keybindings
 - [X] setup fuzzy finder keybindings
 - [X] setup Flutter keybindings
-- [ ] setup git keybindings
+- [X] setup git keybindings
 - [X] configure telescope (preview images, disable binary preview)
 - [X] git integration 
 - [X] git gutter
@@ -26,3 +26,5 @@
 - [X] :Telescope flutter not working
 - [X] lazygit not working
 - [ ] icat in telescope not working
+- [ ] toggleterm not rounded on startup
+

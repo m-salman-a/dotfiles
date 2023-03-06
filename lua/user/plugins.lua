@@ -116,7 +116,8 @@ local plugins = {
 
   -- Terminal
   {
-    "akinsho/toggleterm.nvim"
+    "akinsho/toggleterm.nvim",
+    lazy = false,
   },
 
   -- Git
