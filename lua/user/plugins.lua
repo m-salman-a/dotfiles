@@ -66,6 +66,9 @@ local plugins = {
   {
     "folke/neodev.nvim"
   },
+  {
+    "akinsho/flutter-tools.nvim"
+  },
 
   -- CMP
   {

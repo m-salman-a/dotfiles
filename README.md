@@ -5,7 +5,7 @@
 - [X] set no highlight search after finding result
 - [X] autopairs
 - [ ] fuzzy finder
-- [ ] git integration 
+- [X] git integration 
 - [ ] flutter tools
 - [ ] bufferline
 - [ ] debugger
