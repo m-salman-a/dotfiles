@@ -26,5 +26,5 @@
 - [X] :Telescope flutter not working
 - [X] lazygit not working
 - [ ] icat in telescope not working
-- [ ] toggleterm not rounded on startup
+- [X] toggleterm not rounded on startup
 
