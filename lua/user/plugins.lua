@@ -74,9 +74,8 @@ local plugins = {
   },
 
   {
-    "RRethy/vim-illuminate",
-    enabled = false
-  },
+    "numToStr/Comment.nvim"
+  }
 }
 
 require("lazy").setup(plugins, {

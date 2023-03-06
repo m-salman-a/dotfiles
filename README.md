@@ -9,7 +9,7 @@
 - [ ] flutter tools
 - [ ] bufferline
 - [ ] debugger
-- [ ] comments
+- [X] comments
 - [ ] which key
 - [ ] tab management
 
