@@ -22,6 +22,11 @@ local plugins = {
     lazy = false,
     priority = 1000
   },
+
+  -- Explorer
+  {
+    "nvim-lua/plenary.nvim"
+  },
   {
     "nvim-tree/nvim-web-devicons",
     lazy = false
@@ -32,6 +37,8 @@ local plugins = {
       "nvim-tree/nvim-web-devicons",
     }
   },
+
+  -- Syntax Highlighting
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate"
@@ -73,8 +80,12 @@ local plugins = {
     "L3MON4D3/LuaSnip",
   },
 
+  -- Comments
   {
     "numToStr/Comment.nvim"
+  },
+  {
+    "folke/todo-comments.nvim"
   }
 }
 
