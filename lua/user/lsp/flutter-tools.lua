@@ -4,4 +4,5 @@ if not ok then
   return
 end
 
-flutter_tools.setup()
+flutter_tools.setup({})
+

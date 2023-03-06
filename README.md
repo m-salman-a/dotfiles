@@ -12,15 +12,17 @@
 - [X] configure telescope (preview images, disable binary preview)
 - [X] git integration 
 - [X] git gutter
+- [Xj git blame
 - [X] flutter tools
 - [X] bufferline
 - [ ] debugger
 - [X] comments
 - [ ] which key
 - [X] tab management
+- [ ] lightbulb icon on code action
 
 # Issues
 
 - [X] :Telescope flutter not working
-- [ ] lazygit not working
+- [X] lazygit not working
 - [ ] icat in telescope not working

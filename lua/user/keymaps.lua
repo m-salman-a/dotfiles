@@ -22,6 +22,7 @@ vim.keymap.set("n", "<S-h>", ":bprevious<CR>", opts)
 vim.keymap.set("n", "<M-Up>", ":m .-2<CR>==", opts)
 vim.keymap.set("n", "<M-Down>", ":m .+1<CR>==", opts)
 
+-- Telescope
 vim.keymap.set("n", "<Leader>ff", ":Telescope find_files <CR>", opts)
 vim.keymap.set("n", "<Leader>fg", ":Telescope live_grep <CR>", opts)
 vim.keymap.set("n", "<Leader>fb", ":Telescope buffers initial_mode=normal<CR>", opts)
