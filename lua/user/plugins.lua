@@ -127,6 +127,11 @@ local plugins = {
   {
     "f-person/git-blame.nvim"
   },
+
+  -- Which Key
+  {
+    "folke/which-key.nvim"
+  }
 }
 
 require("lazy").setup(plugins, {
