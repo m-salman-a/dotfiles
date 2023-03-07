@@ -4,5 +4,12 @@ if not ok then
   return
 end
 
-flutter_tools.setup({})
+local handlers = require("user.lsp.handlers")
+
+flutter_tools.setup {
+  lsp = {
+    on_attach = handlers.on_attach,
+    capabilities = handlers.capabilities,
+  }
+}
 

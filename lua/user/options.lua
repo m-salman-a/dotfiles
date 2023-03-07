@@ -13,6 +13,8 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.hlsearch = false
 
+vim.opt.ignorecase = true
+
 vim.o.timeout = true
 vim.o.timeoutlen = 500
 

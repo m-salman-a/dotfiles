@@ -19,7 +19,7 @@ local lazygit = Terminal:new(
   }
 )
 
-function _lazygit_toggle()
+function _LAZYGIT_TOGGLE()
   lazygit:toggle()
 end
 

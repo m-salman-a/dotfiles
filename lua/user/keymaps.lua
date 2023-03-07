@@ -1,12 +1,16 @@
 local opts = { noremap=true, silent=true }
 
+-- Copy to clipboard
+vim.keymap.set("v", "<D-c>", ":'<,'>w !pbcopy<CR>", opts)
+
+-- Nvim-Tree
 vim.keymap.set("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Better window navigation
-vim.keymap.set("n", "<Leader>h", "<C-w>h", opts)
-vim.keymap.set("n", "<Leader>j", "<C-w>j", opts)
-vim.keymap.set("n", "<Leader>k", "<C-w>k", opts)
-vim.keymap.set("n", "<Leader>l", "<C-w>l", opts)
+vim.keymap.set("n", "<Leader>wh", "<C-w>h", opts)
+
+vim.keymap.set("n", "<Leader>wk", "<C-w>k", opts)
+vim.keymap.set("n", "<Leader>wl", "<C-w>l", opts)
 
 -- Resize with arrows
 vim.keymap.set("n", "<C-j>", ":resize +2<CR>", opts)
@@ -29,4 +33,8 @@ vim.keymap.set("n", "<Leader>fb", ":Telescope buffers initial_mode=normal<CR>", 
 vim.keymap.set("n", "<Leader>fl", ":Telescope flutter commands initial_mode=normal<CR>", opts)
 vim.keymap.set("n", "<Leader>fr", ":Telescope lsp_references initial_mode=normal<CR>", opts)
 vim.keymap.set("n", "<Leader>fs", ":Telescope lsp_workspace_symbols initial_mode=normal<CR>", opts)
+
+-- Terminal
+vim.keymap.set("n", "<Leader>t", ":ToggleTerm direction=float<CR>", {noremap = true, silent = true})
+vim.keymap.set("n", "<Leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", {noremap = true, silent = true})
 

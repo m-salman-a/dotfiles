@@ -17,7 +17,7 @@
 - [X] bufferline
 - [ ] debugger
 - [X] comments
-- [ ] which key
+- [X] which key
 - [X] tab management
 - [ ] lightbulb icon on code action
 - [ ] setup quick vertical splits
@@ -28,4 +28,6 @@
 - [X] lazygit not working
 - [ ] icat in telescope not working
 - [X] toggleterm not rounded on startup
+- [ ] bind WhichKey to <Leader>?
+- [ ] copy to clipboard not working
 
