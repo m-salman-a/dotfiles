@@ -8,7 +8,7 @@ vim.keymap.set("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Better window navigation
 vim.keymap.set("n", "<Leader>wh", "<C-w>h", opts)
-
+vim.keymap.set("n", "<Leader>wj", "<C-w>j", opts)
 vim.keymap.set("n", "<Leader>wk", "<C-w>k", opts)
 vim.keymap.set("n", "<Leader>wl", "<C-w>l", opts)
 
