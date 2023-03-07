@@ -12,7 +12,7 @@
 - [X] configure telescope (preview images, disable binary preview)
 - [X] git integration 
 - [X] git gutter
-- [Xj git blame
+- [X] git blame
 - [X] flutter tools
 - [X] bufferline
 - [ ] debugger
@@ -21,6 +21,13 @@
 - [X] tab management
 - [ ] lightbulb icon on code action
 - [ ] setup quick vertical splits
+- [X] setup keybind to close buffer
+- [ ] error highlighting
+- [ ] swap lines in Visual Mode
+- [ ] format on save for dart files
+- [ ] sort imports for dart files
+- [ ] open current file when opening NvimTree
+- [ ] dart barrel files
 
 # Issues
 
@@ -30,4 +37,6 @@
 - [X] toggleterm not rounded on startup
 - [ ] bind WhichKey to <Leader>?
 - [ ] copy to clipboard not working
+- [ ] branch name too long
+- [ ] need better syntax highlighting for keywords (final, const, etc.)
 

@@ -18,9 +18,10 @@ vim.keymap.set("n", "<C-k>", ":resize -2<CR>", opts)
 vim.keymap.set("n", "<C-h>", ":vertical resize -2<CR>", opts)
 vim.keymap.set("n", "<C-l>", ":vertical resize +2<CR>", opts)
 
--- Navigate buffers
+-- Buffers
 vim.keymap.set("n", "<S-l>", ":bnext<CR>", opts)
 vim.keymap.set("n", "<S-h>", ":bprevious<CR>", opts)
+vim.keymap.set("n", "<S-w>", ":bdelete<CR>", opts)
 
 -- Swap lines
 vim.keymap.set("n", "<M-Up>", ":m .-2<CR>==", opts)
