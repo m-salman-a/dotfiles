@@ -26,8 +26,12 @@
 - [ ] swap lines in Visual Mode
 - [ ] format on save for dart files
 - [ ] sort imports for dart files
-- [ ] open current file when opening NvimTree
+- [ ] disable super tab on autocomplete (?)
 - [ ] dart barrel files
+- [X] open current file when opening NvimTree
+- [ ] shortcut to show diagnostics 
+- [ ] view diff from git blame
+- [ ] keybinds for folding
 
 # Issues
 
@@ -38,5 +42,11 @@
 - [ ] bind WhichKey to <Leader>?
 - [ ] copy to clipboard not working
 - [ ] branch name too long
-- [ ] need better syntax highlighting for keywords (final, const, etc.)
+- [X] need better syntax highlighting for keywords (final, const, etc.)
+- [X] need handling for syntax highlighting for keywords
+- [ ] need wrapping for diagnostics
+- [ ] better sorting for completions
+- [X] formattting is different from Vscode even after running dart format
+- [ ] import not updating when renaming file
+- [ ] completion takes a long time when first running neovim
 

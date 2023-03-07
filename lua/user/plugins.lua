@@ -50,6 +50,12 @@ local plugins = {
     }
   },
   {
+    "nvim-treesitter/playground",
+    requires = {
+      "nvim-treesitter/nvim-treesitter"
+    }
+  },
+  {
     "windwp/nvim-autopairs"
   },
 

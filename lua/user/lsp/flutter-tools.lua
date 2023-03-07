@@ -7,9 +7,6 @@ end
 local handlers = require("user.lsp.handlers")
 
 flutter_tools.setup {
-  widget_guides = {
-    enabled = true,
-  },
   lsp = {
     color = {
       enabled = true,
