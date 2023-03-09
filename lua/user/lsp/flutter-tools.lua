@@ -11,7 +11,15 @@ flutter_tools.setup {
     color = {
       enabled = true,
     },
-    on_attach = handlers.on_attach,
+    on_attach = function(client, bufnr)
+      handlers.on_attach(client, bufnr);
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = { "*.dart" },
+        callback = function ()
+          vim.lsp.buf.format { async = false }
+        end
+      })
+    end,
     capabilities = handlers.capabilities,
     settings = {
       completeFunctionCalls = true,
@@ -21,4 +29,5 @@ flutter_tools.setup {
     }
   }
 }
+
 

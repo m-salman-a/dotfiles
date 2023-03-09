@@ -36,12 +36,12 @@ for _, lsp in ipairs(servers) do
   if lsp == "lua_ls" then
     settings = {
       Lua = {
-	diagnostics = {
-	  globals = { "vim" }
-	},
-	telemetry = {
-	  enable = false
-	}
+        diagnostics = {
+          globals = { "vim" }
+        },
+        telemetry = {
+          enable = false
+        }
       }
     }
   end
@@ -57,4 +57,3 @@ end
 require("lspconfig.ui.windows").default_options = {
   border = "rounded"
 }
-
