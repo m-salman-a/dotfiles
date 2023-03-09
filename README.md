@@ -23,8 +23,8 @@
 - [ ] setup quick vertical splits
 - [X] setup keybind to close buffer
 - [ ] error highlighting
-- [ ] swap lines in Visual Mode
-- [ ] format on save for dart files
+- [X] swap lines in Visual Mode
+- [X] format on save for dart files
 - [ ] sort imports for dart files
 - [ ] disable super tab on autocomplete (?)
 - [ ] dart barrel files
