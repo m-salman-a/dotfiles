@@ -7,5 +7,26 @@ end
 lualine.setup {
   options = {
     disabled_filetypes = { "NvimTree" }
+  },
+  sections = {
+    lualine_a = { 'mode' },
+    lualine_b = {
+      {
+        'branch',
+        fmt = function(str)
+          function string.startsWith(start)
+            return string.sub(str, 1, string.len(start)) == start
+          end
+
+          -- Custom config for Work.
+          local substr = string.match(str, 'TOCOPROD[-]%d+')
+          if substr ~= nil then
+            return substr
+          end
+
+          return str:sub(1,30)
+        end
+      }
+    }
   }
 }

@@ -25,9 +25,9 @@
 - [ ] error highlighting
 - [X] swap lines in Visual Mode
 - [X] format on save for dart files
-- [ ] sort imports for dart files
 - [ ] disable super tab on autocomplete (?)
 - [ ] dart barrel files
+- [ ] sort imports for dart files
 - [X] open current file when opening NvimTree
 - [ ] shortcut to show diagnostics 
 - [ ] view diff from git blame
@@ -37,16 +37,16 @@
 
 - [X] :Telescope flutter not working
 - [X] lazygit not working
-- [ ] icat in telescope not working
+- [-] icat in telescope not working
 - [X] toggleterm not rounded on startup
 - [ ] bind WhichKey to <Leader>?
 - [ ] copy to clipboard not working
-- [ ] branch name too long
+- [X] branch name too long
 - [X] need better syntax highlighting for keywords (final, const, etc.)
 - [X] need handling for syntax highlighting for keywords
 - [ ] need wrapping for diagnostics
 - [ ] better sorting for completions
 - [X] formattting is different from Vscode even after running dart format
 - [ ] import not updating when renaming file
-- [ ] completion takes a long time when first running neovim
+- [X] completion takes a long time when first running neovim
 
