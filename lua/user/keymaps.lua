@@ -33,8 +33,7 @@ vim.keymap.set("n", "<Leader>ff", ":Telescope find_files <CR>", opts)
 vim.keymap.set("n", "<Leader>fg", ":Telescope live_grep <CR>", opts)
 vim.keymap.set("n", "<Leader>fb", ":Telescope buffers initial_mode=normal<CR>", opts)
 vim.keymap.set("n", "<Leader>fl", ":Telescope flutter commands initial_mode=normal<CR>", opts)
-vim.keymap.set("n", "<Leader>fr", ":Telescope lsp_references initial_mode=normal<CR>", opts)
-vim.keymap.set("n", "<Leader>fs", ":Telescope lsp_workspace_symbols initial_mode=normal<CR>", opts)
+vim.keymap.set("n", "<Leader>fd", ":Telescope diagnostics initial_mode=normal<CR>")
 
 -- Terminal
 vim.keymap.set("n", "<Leader>t", ":ToggleTerm direction=float<CR>", opts)
