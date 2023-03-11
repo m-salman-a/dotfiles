@@ -4,6 +4,17 @@ if not ok then
   return
 end
 
+local function diff_source()
+  local gitsigns = vim.b.gitsigns_status_dict
+  if gitsigns then
+    return {
+      added = gitsigns.added,
+      modified = gitsigns.changed,
+      removed = gitsigns.removed
+    }
+  end
+end
+
 lualine.setup {
   options = {
     disabled_filetypes = { "NvimTree" }
@@ -12,7 +23,7 @@ lualine.setup {
     lualine_a = { 'mode' },
     lualine_b = {
       {
-        'branch',
+        'b:gitsigns_head',
         fmt = function(str)
           function string.startsWith(start)
             return string.sub(str, 1, string.len(start)) == start
@@ -24,9 +35,14 @@ lualine.setup {
             return substr
           end
 
-          return str:sub(1,30)
+          return str:sub(1, 30)
         end
-      }
+      },
+      {
+        'diff',
+        source = diff_source
+      },
+      { 'diagnostics' },
     }
-  }
+  },
 }

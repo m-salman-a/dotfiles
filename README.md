@@ -46,7 +46,7 @@
 - [X] need handling for syntax highlighting for keywords
 - [ ] need wrapping for diagnostics
 - [ ] better sorting for completions
-- [X] formattting is different from Vscode even after running dart format
+- [X] formatting is different from Vscode even after running dart format
 - [ ] import not updating when renaming file
 - [X] completion takes a long time when first running neovim
 
