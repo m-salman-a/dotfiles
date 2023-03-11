@@ -14,13 +14,13 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
   {
     "joshdick/onedark.vim",
-    lazy = false,
-    priority = 1000
   },
   {
     "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000
+  },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
   },
 
   -- Explorer

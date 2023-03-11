@@ -1,23 +1,43 @@
-require("tokyonight").setup {
-  on_highlights = function (highlights, colors)
-    highlights["@keyword"] = {
-      fg = colors.magenta,
-    }
-    highlights["@keyword.return"] = {
-      fg = colors.magenta,
-    }
-    highlights["@type.qualifier"] = {
-      fg = colors.magenta,
-      italic = true,
-    }
-    highlights["@constant.builtin"] = {
-      fg = "#ff9e64"
-    }
-    highlights["@parameter"] = {}
-  end
-}
+local ok, tokyonight = pcall(require, "tokyonight")
+if ok then
+  tokyonight.setup {
+    on_highlights = function (highlights, colors)
+      highlights["@keyword"] = {
+        fg = colors.magenta,
+      }
+      highlights["@keyword.return"] = {
+        fg = colors.magenta,
+      }
+      highlights["@type.qualifier"] = {
+        fg = colors.magenta,
+        italic = true,
+      }
+      highlights["@constant.builtin"] = {
+        fg = "#ff9e64"
+      }
+      highlights["@parameter"] = {}
+    end
+  }
+end
 
-local colorscheme = "tokyonight-storm"
+local ok2, catppuccin = pcall(require, "catppuccin")
+if ok2 then
+  catppuccin.setup {
+    integrations = {
+      cmp = true,
+      gitsigns = true,
+      nvimtree = true,
+      treesitter = true,
+      telescope = true,
+      native_lsp = {
+        enable = true
+      },
+      mason = true
+    }
+  }
+end
+
+local colorscheme = "catppuccin-frappe"
 
 local ok = pcall(vim.cmd.colorscheme, colorscheme)
 if not ok then
