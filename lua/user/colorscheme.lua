@@ -23,6 +23,12 @@ end
 local ok2, catppuccin = pcall(require, "catppuccin")
 if ok2 then
   catppuccin.setup {
+    custom_highlights = function (colors)
+      return {
+        ["@type.qualifier"] = { fg = colors.mauve, style = { "italic" } },
+        ["@attribute"] = { fg = colors.sky }
+      }
+    end,
     integrations = {
       cmp = true,
       gitsigns = true,
