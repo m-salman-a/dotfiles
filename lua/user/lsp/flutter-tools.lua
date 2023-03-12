@@ -22,10 +22,7 @@ flutter_tools.setup {
     end,
     capabilities = handlers.capabilities,
     settings = {
-      completeFunctionCalls = true,
-      updateImportsOnRename = true,
-      analysisExcludedFolders = {"$HOME/Developer/flutter"},
-      renameFilesWithClasses = "prompt",
+      analysisExcludedFolders = { "$HOME/Developer/flutter" },
     }
   }
 }

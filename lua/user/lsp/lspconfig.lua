@@ -15,6 +15,8 @@ if not ok3 then
   print("Lspconfig could not be initialized")
 end
 
+local handlers = require("user.lsp.handlers")
+
 local servers = { "lua_ls", "yamlls", "jsonls" }
 
 mason.setup {
@@ -27,8 +29,6 @@ mason_lspconfig.setup {
   ensure_initialized = servers,
   automatic_installation = true
 }
-
-local handlers = require("user.lsp.handlers")
 
 for _, lsp in ipairs(servers) do
   local settings = {}
