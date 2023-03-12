@@ -1,5 +1,8 @@
 local opts = { noremap=true, silent=true }
 
+-- Copy to clipboard
+vim.keymap.set("v", "<C-c>", '"+y', opts)
+
 -- Nvim-Tree
 vim.keymap.set("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 

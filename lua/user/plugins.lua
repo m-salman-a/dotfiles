@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+  -- Colorschemes
   {
     "joshdick/onedark.vim",
   },
@@ -33,8 +34,15 @@ local plugins = {
   },
   {
     "nvim-tree/nvim-tree.lua",
-    requires = {
+    dependencies = {
       "nvim-tree/nvim-web-devicons",
+    }
+  },
+  {
+    "antosha417/nvim-lsp-file-operations",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-tree.lua",
     }
   },
 
@@ -45,13 +53,13 @@ local plugins = {
   },
   {
     "nvim-treesitter/nvim-treesitter-refactor",
-    requires = {
+    dependencies = {
       "nvim-treesitter/nvim-treesitter"
     }
   },
   {
     "nvim-treesitter/playground",
-    requires = {
+    dependencies = {
       "nvim-treesitter/nvim-treesitter"
     }
   },
