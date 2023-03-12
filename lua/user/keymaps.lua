@@ -39,6 +39,5 @@ vim.keymap.set("n", "<Leader>fl", ":Telescope flutter commands initial_mode=norm
 vim.keymap.set("n", "<Leader>fd", ":Telescope diagnostics initial_mode=normal<CR>")
 
 -- Terminal
-vim.keymap.set("n", "<Leader>t", ":ToggleTerm direction=float<CR>", opts)
 vim.keymap.set("n", "<Leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
