@@ -44,6 +44,8 @@ local has_words_before = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
+local compare = cmp.config.compare
+
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -60,44 +62,35 @@ cmp.setup {
   mapping = cmp.mapping.preset.insert({
     ["<CR>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
-	cmp.confirm()
+        cmp.confirm()
       else
-	fallback() -- If you use vim-endwise, this fallback will behave the same as vim-endwise.
+        fallback() -- If you use vim-endwise, this fallback will behave the same as vim-endwise.
       end
     end),
-
-    ["<Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-	cmp.select_next_item()
-	-- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable() 
-	-- they way you will only jump inside the snippet region
-      elseif snip.expand_or_jumpable() then
-	snip.expand_or_jump()
-      elseif has_words_before() then
-	cmp.complete()
-      else
-	fallback()
-      end
-    end, { "i", "s" }),
-
-    ["<S-Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-	cmp.select_prev_item()
-      elseif snip.jumpable(-1) then
-	snip.jump(-1)
-      else
-	fallback()
-      end
-    end, { "i", "s" }),
+    ["q"] = cmp.mapping.abort()
   }),
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
   },
   sources = cmp.config.sources({
+    { name = "luasnip" },
     { name = "nvim_lsp" },
     { name = "nvim_lua" },
-    { name = "luasnip" },
-  })
+  }),
+  sorting = {
+    comparators = {
+      -- compare.score_offset, -- not good at all
+      compare.score, -- based on :  score = score + ((#sources - (source_index - 1)) * sorting.priority_weight)
+      -- compare.locality,
+      -- compare.recently_used,
+      -- compare.offset,
+      -- compare.order,
+      -- compare.scopes, -- what?
+      -- compare.sort_text,
+      -- compare.exact,
+      -- compare.kind,
+      -- compare.length, -- useless ,
+    }
+  }
 }
-
