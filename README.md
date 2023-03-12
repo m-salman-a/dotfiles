@@ -15,21 +15,21 @@
 - [X] git blame
 - [X] flutter tools
 - [X] bufferline
-- [ ] debugger
+- [X] debugger
 - [X] comments
 - [X] which key
 - [X] tab management
 - [ ] lightbulb icon on code action
-- [ ] setup quick vertical splits
+- [X] setup quick vertical splits
 - [X] setup keybind to close buffer
-- [ ] error highlighting
+- [X] error highlighting
 - [X] swap lines in Visual Mode
 - [X] format on save for dart files
-- [ ] disable super tab on autocomplete (?)
+- [X] disable super tab on autocomplete (?)
 - [ ] dart barrel files
 - [ ] sort imports for dart files
 - [X] open current file when opening NvimTree
-- [ ] shortcut to show diagnostics 
+- [X] shortcut to show diagnostics 
 - [ ] view diff from git blame
 - [ ] keybinds for folding
 
@@ -49,5 +49,7 @@
 - [X] formatting is different from Vscode even after running dart format
 - [?] import not updating when renaming file
 - [X] completion takes a long time when first running neovim
-- [ ] which-key annoying popup when going to visual mode
+- [X] which-key annoying popup when going to visual mode
+- [X] dev-log still opens in a vertical split
+- [ ] fix DAP not launching when there is no .vscode/launch.json
 

@@ -141,6 +141,11 @@ local plugins = {
   {
     "f-person/git-blame.nvim"
   },
+
+  -- Debugger
+  {
+    "mfussenegger/nvim-dap"
+  }
 }
 
 require("lazy").setup(plugins, {

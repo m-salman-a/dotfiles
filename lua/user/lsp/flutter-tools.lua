@@ -46,9 +46,17 @@ flutter_tools.setup {
       })
     end,
     capabilities = handlers.capabilities,
-    settings = {
-      analysisExcludedFolders = { "$HOME/Developer/flutter" },
-  }
+  },
+  debugger = {
+    enabled = true,
+    run_via_dap = true,
+    register_configurations = function(_)
+      local ok2 = pcall(require, "dap")
+      if not ok2 then
+        return
+      end
+      require("dap").configurations.dart = {}
+      require("dap.ext.vscode").load_launchjs()
+    end,
+  },
 }
-
-
