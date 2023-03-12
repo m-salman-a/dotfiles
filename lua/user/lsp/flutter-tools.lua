@@ -22,6 +22,15 @@ function _DART_TOGGLE_LOG()
 end
 
 flutter_tools.setup {
+  decorations = {
+    statusline = {
+      device = true
+    }
+  },
+  dev_log = {
+    enabled = true,
+    open_cmd = "split __FLUTTER_DEV_LOG__ | resize 15", -- command to use to open the log buffer
+  },
   lsp = {
     color = {
       enabled = true,
@@ -31,7 +40,6 @@ flutter_tools.setup {
       vim.keymap.set("n", "<Leader>tl", "<cmd>lua _DART_TOGGLE_LOG() <CR>")
       vim.api.nvim_create_autocmd("BufWritePre", {
         pattern = { "*.dart" },
-        callback = function ()
         callback = function()
           vim.lsp.buf.format { async = false }
         end
@@ -40,7 +48,6 @@ flutter_tools.setup {
     capabilities = handlers.capabilities,
     settings = {
       analysisExcludedFolders = { "$HOME/Developer/flutter" },
-    }
   }
 }
 
