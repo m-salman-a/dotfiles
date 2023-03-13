@@ -4,6 +4,10 @@ if not ok then
   return
 end
 
+local path = require "lspconfig.util".path
+local debugger_dir = path.join(vim.fn.stdpath("cache"), "dart-code")
+local debugger_path = path.join(debugger_dir, "out", "dist", "debug.js")
+
 local handlers = require("user.lsp.handlers")
 
 function _DART_TOGGLE_LOG()
@@ -50,12 +54,17 @@ flutter_tools.setup {
   debugger = {
     enabled = true,
     run_via_dap = true,
-    register_configurations = function(_)
-      local ok2 = pcall(require, "dap")
+    register_configurations = function(paths)
+      local ok2, dap = pcall(require, "dap")
       if not ok2 then
         return
       end
-      require("dap").configurations.dart = {}
+      dap.adapters.dart = {
+        type = "executable",
+        command = "flutter",
+        args = { "debug_adapter" },
+      }
+      dap.configurations.dart = {}
       require("dap.ext.vscode").load_launchjs()
     end,
   },

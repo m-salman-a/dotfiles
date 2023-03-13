@@ -31,7 +31,10 @@
 - [X] open current file when opening NvimTree
 - [X] shortcut to show diagnostics 
 - [ ] view diff from git blame
-- [ ] keybinds for folding
+- [ ] keymaps for folding
+- [ ] keymaps for DAP (:DapToggleBreakpoint, :DapCountinue)
+- [ ] DAP view current value of variable
+- [ ] switch between dart and flutter debug_adapters
 
 # Issues
 
@@ -51,5 +54,6 @@
 - [X] completion takes a long time when first running neovim
 - [X] which-key annoying popup when going to visual mode
 - [X] dev-log still opens in a vertical split
-- [ ] fix DAP not launching when there is no .vscode/launch.json
+- [ ] DAP not launching flutter project when there is no .vscode/launch.json
+- [X] DAP not opening flutter dev log (console)
 
