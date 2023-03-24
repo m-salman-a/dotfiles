@@ -56,4 +56,5 @@
 - [X] dev-log still opens in a vertical split
 - [ ] DAP not launching flutter project when there is no .vscode/launch.json
 - [X] DAP not opening flutter dev log (console)
+- [ ] dart type definition
 

@@ -10,6 +10,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", bufopts)
   vim.keymap.set("n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", bufopts)
   vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", bufopts)
+  vim.keymap.set("n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", bufopts)
   vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", bufopts)
   vim.keymap.set("n", "<Leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", bufopts)
   vim.keymap.set("n", "<Leader>]d", "<cmd>lua vim.diagnostic.goto_next({buffer=0})<CR>", bufopts)
@@ -35,6 +36,7 @@ end
 M.handlers = {
   ["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
   ["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
+  ["textDocument/typeDefinition"] = vim.lsp.with(vim.lsp.handlers.type_definition, { border = "rounded" })
 }
 
 vim.diagnostic.config {

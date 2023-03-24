@@ -95,7 +95,7 @@ local plugins = {
   "hrsh7th/cmp-nvim-lua",
   "saadparwaiz1/cmp_luasnip",
 
-  -- Snippets 
+  -- Snippets
   {
     "L3MON4D3/LuaSnip",
   },
@@ -119,13 +119,19 @@ local plugins = {
     "nvim-telescope/telescope-fzf-native.nvim",
     build = "make"
   },
+  {
+    "nvim-telescope/telescope-dap.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim"
+    }
+  },
 
   -- Bufferline
   {
     "nvim-lualine/lualine.nvim",
     dependencies = {
       "nvim-tree/nvim-web-devicons"
-    }
+    },
   },
 
   -- Terminal
@@ -145,7 +151,11 @@ local plugins = {
   -- Debugger
   {
     "mfussenegger/nvim-dap"
-  }
+  },
+
+  {
+    "m00qek/baleia.nvim"
+  },
 }
 
 require("lazy").setup(plugins, {

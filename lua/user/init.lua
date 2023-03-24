@@ -15,4 +15,5 @@ require "user.git-blame"
 require "user.toggleterm"
 require "user.comment"
 require "user.todo"
+require "user.baleia"
 

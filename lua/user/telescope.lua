@@ -6,10 +6,6 @@ end
 
 local actions = require("telescope.actions")
 
-telescope.load_extension("fzf")
-
-telescope.load_extension("flutter")
-
 telescope.setup {
   pickers = {
     buffers = {
@@ -32,3 +28,9 @@ telescope.setup {
     }
   }
 }
+
+telescope.load_extension("fzf")
+
+telescope.load_extension("flutter")
+
+telescope.load_extension("dap")
