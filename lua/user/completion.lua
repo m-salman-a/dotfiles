@@ -67,7 +67,6 @@ cmp.setup {
         fallback() -- If you use vim-endwise, this fallback will behave the same as vim-endwise.
       end
     end),
-    ["q"] = cmp.mapping.abort()
   }),
   window = {
     completion = cmp.config.window.bordered(),
