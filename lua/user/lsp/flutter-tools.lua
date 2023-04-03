@@ -41,11 +41,18 @@ flutter_tools.setup {
     },
     on_attach = function(client, bufnr)
       handlers.on_attach(client, bufnr);
+
+      local opts = { noremap = true, silent = true }
+
       vim.keymap.set("n", "<Leader>tl", "<cmd>lua _DART_TOGGLE_LOG() <CR>")
+      vim.keymap.set("n", "<Leader>fc", ":FlutterLogClear<CR>", opts)
+      vim.keymap.set("n", "<Leader>fr", ":FlutterReload<CR>", opts)
+      vim.keymap.set("n", "<Leader>fR", ":FlutterRestart<CR>", opts)
+
       vim.api.nvim_create_autocmd("BufWritePre", {
         pattern = { "*.dart" },
         callback = function()
-          vim.lsp.buf.format { async = false, timeout_ms = 10000 }
+          pcall(vim.lsp.buf.format, { async = false, timeout_ms = 10000 })
         end
       })
     end,
@@ -54,17 +61,20 @@ flutter_tools.setup {
   debugger = {
     enabled = true,
     run_via_dap = true,
-    register_configurations = function(paths)
+    register_configurations = function(_)
       local ok2, dap = pcall(require, "dap")
       if not ok2 then
         return
       end
+
       dap.adapters.dart = {
         type = "executable",
         command = "flutter",
         args = { "debug_adapter" },
       }
+
       dap.configurations.dart = {}
+
       require("dap.ext.vscode").load_launchjs()
     end,
   },
