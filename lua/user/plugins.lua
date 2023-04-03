@@ -156,6 +156,9 @@ local plugins = {
   {
     "m00qek/baleia.nvim"
   },
+  {
+    "norcalli/nvim-terminal.lua"
+  }
 }
 
 require("lazy").setup(plugins, {
