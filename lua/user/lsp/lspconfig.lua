@@ -17,7 +17,7 @@ end
 
 local handlers = require("user.lsp.handlers")
 
-local servers = { "lua_ls", "yamlls", "jsonls" }
+local servers = { "lua_ls", "jsonls" }
 
 mason.setup {
   ui = {
