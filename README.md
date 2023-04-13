@@ -1,4 +1,8 @@
-# TODO
+# My Neovim Config
+
+(Mostly for Flutter development)
+
+## TODO
 
 - [X] setup cmp for lsp
 - [X] add icons and left align them in cmp 
@@ -36,7 +40,7 @@
 - [ ] DAP view current value of variable
 - [ ] switch between dart and flutter debug_adapters
 
-# Issues
+## Issues
 
 - [X] :Telescope flutter not working
 - [X] lazygit not working
