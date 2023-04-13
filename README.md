@@ -44,17 +44,17 @@
 
 - [X] :Telescope flutter not working
 - [X] lazygit not working
-- [-] icat in telescope not working
+- [ ] ~~image viewer in telescope not working~~
 - [X] toggleterm not rounded on startup
-- [-] bind WhichKey to <Leader>?
-- [?] copy to clipboard not working
+- [ ] ~~bind WhichKey to <Leader>?~~
+- [X] copy to clipboard not working
 - [X] branch name too long
 - [X] need better syntax highlighting for keywords (final, const, etc.)
 - [X] need handling for syntax highlighting for keywords
-- [ ] need wrapping for diagnostics
+- [ ] ~~need wrapping for diagnostics~~
 - [ ] better sorting for completions
 - [X] formatting is different from Vscode even after running dart format
-- [?] import not updating when renaming file
+- [X] import not updating when renaming file
 - [X] completion takes a long time when first running neovim
 - [X] which-key annoying popup when going to visual mode
 - [X] dev-log still opens in a vertical split
