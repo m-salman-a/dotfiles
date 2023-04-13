@@ -52,7 +52,7 @@ flutter_tools.setup {
       vim.api.nvim_create_autocmd("BufWritePre", {
         pattern = { "*.dart" },
         callback = function()
-          pcall(vim.lsp.buf.format, { async = false, timeout_ms = 10000 })
+          vim.lsp.buf.format({ timeout_ms = 10000 })
         end
       })
     end,

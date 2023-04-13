@@ -84,6 +84,7 @@ cmp.setup {
     ["<Esc>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.abort()
+        vim.cmd [[stopinsert]]
       else
         fallback() -- If you use vim-endwise, this fallback will behave the same as vim-endwise.
       end
