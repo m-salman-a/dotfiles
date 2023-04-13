@@ -153,12 +153,6 @@ local plugins = {
     "mfussenegger/nvim-dap"
   },
 
-  {
-    "m00qek/baleia.nvim"
-  },
-  {
-    "norcalli/nvim-terminal.lua"
-  }
 }
 
 require("lazy").setup(plugins, {
