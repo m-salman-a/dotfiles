@@ -7,9 +7,6 @@ end
 
 formatter.setup {
   filetype = {
-    lua = {
-      require("formatter.filetypes.lua").stylua,
-    },
     dart = {
       require("formatter.filetypes.dart").dartformat,
     },

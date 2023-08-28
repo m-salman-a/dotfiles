@@ -3,22 +3,34 @@ M = {}
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-  -- Keymaps
-  local bufopts = { noremap = true, silent = true, buffer = bufnr }
-  vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", bufopts)
-  vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", bufopts)
-  vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", bufopts)
-  vim.keymap.set("n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", bufopts)
-  vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", bufopts)
-  vim.keymap.set("n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", bufopts)
-  vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", bufopts)
-  vim.keymap.set("n", "<Leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", bufopts)
-  vim.keymap.set("n", "<Leader>]d", "<cmd>lua vim.diagnostic.goto_next({buffer=0})<CR>", bufopts)
-  vim.keymap.set("n", "<Leader>[d", "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<CR>", bufopts)
-  vim.keymap.set("n", "<Leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", bufopts)
-  vim.keymap.set("n", "<Leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", bufopts)
-  vim.keymap.set("n", "<Leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", bufopts)
-  vim.keymap.set('n', '<Leader>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+    local nmap = function(keys, func, desc)
+    if desc then
+      desc = 'LSP: ' .. desc
+    end
+
+    vim.keymap.set('n', keys, func, { noremap = true, silent = true, buffer = bufnr, desc = desc })
+  end
+
+  -- Diagnostics
+  nmap("]d", function() vim.diagnostic.goto_next({buffer=0}) end, "Go to next diagnostic message")
+  nmap("[d", function() vim.diagnostic.goto_prev({buffer=0}) end, "Go to previous diagnostic message")
+  nmap("<Leader>e", vim.diagnostic.open_float, "Open floating diagnostic message")
+  nmap("<Leader>fd", function() require("telescope.builtin").diagnostics {initial_mode="normal"} end, "[F]ind [D]iagnostics")
+
+  -- Signature
+  nmap("K", vim.lsp.buf.hover, "Hover Documentation")
+  nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+
+  -- Goto
+  nmap("gd", vim.lsp.buf.definition, "[G]oto [D]efinition")
+  nmap("gI", vim.lsp.buf.implementation, "[G]oto [I]mplementation")
+  nmap("gr", function() require("telescope.builtin").lsp_references {initial_mode="normal"} end, "[G]oto [R]eferences")
+  nmap("<Leader>fs", function() require("telescope.builtin").lsp_document_symbols {initial_mode="normal"} end, "[F]ind [S]ymbols")
+  nmap("<Leader>fm", function() vim.lsp.buf.format { async = true } end)
+
+  -- Less used
+  nmap("gD", vim.lsp.buf.declaration, "[G]oto [Declaration]")
+  nmap("<Leader>D",  vim.lsp.buf.type_definition, "Type [D]efinition")
 end
 
 M.on_attach = on_attach
