@@ -44,8 +44,6 @@ local has_words_before = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
-local compare = cmp.config.compare
-
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -101,17 +99,13 @@ cmp.setup {
   }),
   sorting = {
     comparators = {
-      -- compare.score_offset, -- not good at all
-      compare.score, -- based on :  score = score + ((#sources - (source_index - 1)) * sorting.priority_weight)
-      -- compare.locality,
-      -- compare.recently_used,
-      -- compare.offset,
-      -- compare.order,
-      -- compare.scopes, -- what?
-      -- compare.sort_text,
-      -- compare.exact,
-      -- compare.kind,
-      -- compare.length, -- useless ,
+      cmp.config.compare.offset,
+      cmp.config.compare.exact,
+      cmp.config.compare.score,
+      cmp.config.compare.kind,
+      -- cmp.config.compare.sort_text,
+      cmp.config.compare.length,
+      cmp.config.compare.order,
     }
   }
 }
