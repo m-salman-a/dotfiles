@@ -59,9 +59,10 @@ flutter_tools.setup {
     end,
     capabilities = handlers.capabilities,
     settings = {
-      renameFilesWithClasses = "prompt",
-      updateImportsOnRename = true,
-      completeFunctionCalls = true,
+      analysisExcludedFolders = {
+        "/Users/mohammadalfarisi/fvm",
+        "/Users/mohammadalfarisi/.pub-cache"
+      },
     },
   },
   debugger = {
