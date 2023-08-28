@@ -86,6 +86,9 @@ local plugins = {
       "nvim-lua/plenary.nvim"
     }
   },
+  {
+    "mhartington/formatter.nvim"
+  },
 
   -- CMP
   {

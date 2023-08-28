@@ -49,13 +49,6 @@ flutter_tools.setup {
       vim.keymap.set("n", "<Leader>fc", ":FlutterLogClear<CR>", opts)
       vim.keymap.set("n", "<Leader>fr", ":FlutterReload<CR>", opts)
       vim.keymap.set("n", "<Leader>fR", ":FlutterRestart<CR>", opts)
-
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        pattern = { "*.dart" },
-        callback = function()
-          vim.lsp.buf.format({ timeout_ms = 10000 })
-        end
-      })
     end,
     capabilities = handlers.capabilities,
     settings = {

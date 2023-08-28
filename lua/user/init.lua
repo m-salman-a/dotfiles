@@ -13,6 +13,7 @@ require "user.completion"
 require "user.gitsigns"
 require "user.git-blame"
 require "user.toggleterm"
+require "user.formatter"
 require "user.comment"
 require "user.todo"
 
