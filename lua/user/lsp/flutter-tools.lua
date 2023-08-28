@@ -26,6 +26,7 @@ function _DART_TOGGLE_LOG()
 end
 
 flutter_tools.setup {
+  fvm = true,
   decorations = {
     statusline = {
       device = true
@@ -57,11 +58,16 @@ flutter_tools.setup {
       })
     end,
     capabilities = handlers.capabilities,
+    settings = {
+      renameFilesWithClasses = "prompt",
+      updateImportsOnRename = true,
+      completeFunctionCalls = true,
+    },
   },
   debugger = {
     enabled = true,
     run_via_dap = true,
-    register_configurations = function(_)
+    register_configurations = function(paths)
       local ok2, dap = pcall(require, "dap")
       if not ok2 then
         return
@@ -73,7 +79,17 @@ flutter_tools.setup {
         args = { "debug_adapter" },
       }
 
-      dap.configurations.dart = {}
+      dap.configurations.dart = {
+        {
+          type = "dart",
+          request = "launch",
+          name = "Launch Flutter App",
+          dartSdkPath = paths.dart_sdk,                     -- ensure this is correct
+          flutterSdkPath = paths.flutter_sdk,               -- ensure this is correct
+          program = "${workspaceFolder}/lib/main.dart",     -- ensure this is correct
+          cwd = "${workspaceFolder}",
+        },
+      }
 
       require("dap.ext.vscode").load_launchjs()
     end,

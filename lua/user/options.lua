@@ -20,6 +20,9 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.hlsearch = false
 
+vim.opt.cursorline = true
+vim.opt.cursorlineopt="number"
+
 vim.o.timeout = true
 vim.o.timeoutlen = 500
 

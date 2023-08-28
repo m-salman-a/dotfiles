@@ -5,7 +5,7 @@ if not ok then
 end
 
 nvim_treesitter.setup {
-  ensure_installed = { "lua", "vim", "help", "dart", "yaml", "json" },
+  ensure_installed = { "lua", "vim", "help", "yaml", "json" },
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,

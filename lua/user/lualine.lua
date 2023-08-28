@@ -6,7 +6,8 @@ end
 
 lualine.setup {
   options = {
-    disabled_filetypes = { "NvimTree" }
+    disabled_filetypes = { "NvimTree" },
+    theme = "catppuccin"
   },
   sections = {
     lualine_a = { 'mode' },
